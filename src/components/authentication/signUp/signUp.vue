@@ -99,7 +99,7 @@
                     <div class="text-center mt-5">
                         <button
                             type="submit"
-                            class="btn btn-primary btn-pill h3"
+                            class="btn btn-primary btn-pill w-50"
                             @click.prevent="submitButton"
                         >
                             {{ $t("continue") }}
