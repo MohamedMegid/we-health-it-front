@@ -1,0 +1,59 @@
+{
+    "en": {
+        "signUp": "Sign Up",
+        "fullName": "Full Name",
+        "username": "User Name",
+        "phoneNumber": {
+            "label": "Phone Number",
+            "enterCode": "Enter Code",
+            "ActiveButton": "Active",
+            "RemainingTime": "Remaining",
+            "resend": "Resend",
+             "resendTitle":"Didn't get it?",
+            "seconds": "s",
+            "sendCode":"Send code"
+        },
+        "birthDate": "Birth Date",
+        "gender": "Gender",
+        "placeHolder": {
+            "emailAddress": "example@example.com",
+            "username": "@userName",
+            "male": "Male",
+            "female": "Female",
+            "fullName": "Full Name",
+            "gender": "Gender"
+        },
+        "done": "Done",
+        "termsText": "By signing up, you agree that you have read and accepted the ",
+        "termsLink": "Terms of use & Privacy Policy."
+    },
+    "ar": {
+        "signUp": "انشاء حساب",
+        "fullName": "الاسم بالكامل ",
+        "username": "اسم المستخدم",
+        "phoneNumber": {
+            "label": "رقم الهاتف",
+            "enterCode": "ادخل الكود",
+            "ActiveButton": "تفعيل",
+            "RemainingTime": "باقي من ",
+            "seconds": "ث",
+            "resend": "اعاده ارسال",
+            "resendTitle":"لم يصل الكود؟",
+            "sendCode":"ارسال الكود"
+        },
+
+        "birthDate": "تاريخ الميلاد",
+        "gender": "النوع",
+        "placeHolder": {
+            "emailAddress": "example@example.com",
+            "username": "@userName",
+            "male": "ذكر",
+            "female": "انثي",
+            "fullName": "الاسم بالكامل ",
+            "gender": "النوع"
+        },
+        "done": "ادخال",
+        "termsText": " عند انشائك الحساب انت توافقك علي انك قراءت ووافقت علي ",
+        "termsLink": "شروط الاستخدام وسياسة الخصوصية.."
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "en": {
+        "verifyHeader": "Verify your phone number",
+        "verifyMessage": "Please check your phone inbox for a verification code, if you couldn't find it, click resend.",
+        "inputPlaceHolder": "Enter code",
+        "RemainingTime": "Remaining",
+        "done": "Done",
+        "resend": "Resend",
+        "seconds":"s"
+    },
+    "ar": {
+        "verifyHeader": "التحقق من رقم الهاتف",
+        "verifyMessage": "من فضلك تحقق من رسائل هاتفك اذا لم تصلك الرساله اضغط اعاده ارسال",
+        "inputPlaceHolder": "ادخل الكود",
+        "RemainingTime": "باقي",
+        "done": "ادخال",
+        "resend": "اعاده ارسال",
+        "seconds":" ثانية"
+    }
+}

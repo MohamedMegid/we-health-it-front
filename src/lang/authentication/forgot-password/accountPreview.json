@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title": "Find your account",
+    "text": "Is that You ?",
+    "yesBtn": "Yes",
+    "tryBtn": "Try again"
+  },
+  "ar": {
+    "title": "ابحث عن حسابك",
+    "text": "هل هذا انت ؟",
+    "yesBtn": "نعم",
+    "tryBtn": "حاول مجدداً"
+  }
+}
