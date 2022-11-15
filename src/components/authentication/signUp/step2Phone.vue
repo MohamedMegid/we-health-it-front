@@ -48,13 +48,13 @@
                             <strong>{{ $t("phoneNumber.label") }}</strong>
                         </label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" v-model="form.phoneNumber.phone" :placeholder="$t('phoneNumber.label')" @input="$v.form.phoneNumbe.$touch()" aria-label="Recipient's username" aria-describedby="button-addon2" :class="{
+                            <input type="text" class="form-control" v-model="form.phoneNumber.phone" :placeholder="$t('phoneNumber.label')" @input="$v.form.phoneNumbe.$touch()" aria-label="Recipient's username" aria-describedby="button-addon2" :class="`${local === 'en' ? 'asset-custom-rtl' : 'asset-custom-ltr'} {
                               'is-invalid':
                                 $v.form.phoneNumbe.$invalid &&
                                 $v.form.phoneNumbe.$anyDirty &&
                                 $v.form.phoneNumbe.$anyError,
-                            }" />
-                            <button :class="`btn btn-primary ${local === 'en' ? 'btn-custom-ltr' : 'btn-custom-rtl'}`" type="button" id="button-addon2" @click="resend">
+                            }`" />
+                            <button :class="`btn btn-primary ${local === 'en' ? 'asset-custom-ltr' : 'asset-custom-rtl'}`" type="button" id="button-addon2" @click="resend">
                                 {{ $t("phoneNumber.sendCode")}}
                             </button>
                             <div v-if="!$v.form.phoneNumbe.required" class="invalid-feedback">
@@ -100,13 +100,13 @@
                         <!-- 2.6 notation -->
                         <template #activator="{ date }">
                             <div class="input-group">
-                                <input ref="inputDate" class="form-control fc-datepicker hasDatepicker" :value="datePicked ? date : 'YYYY/MM/DD'" type="text" :class="{
+                                <input ref="inputDate" class="form-control fc-datepicker hasDatepicker" :value="datePicked ? date : 'YYYY/MM/DD'" type="text" :class="`${local === 'en' ? 'asset-custom-rtl' : 'asset-custom-ltr'} {
                                   'is-invalid':
                                     $v.form.birthDate.$invalid &&
                                     $v.form.birthDate.$anyDirty &&
                                     $v.form.birthDate.$anyError,
-                                }" />
-                                <div class="input-group-text">
+                                }`" />
+                                <div :class="`input-group-text justify-content-center w-15 ${local === 'en' ? 'asset-custom-ltr' : 'asset-custom-rtl'}`">
                                     <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
                                 </div>
                                 <div v-if="$v.form.birthDate.$error" class="invalid-feedback">
@@ -120,12 +120,12 @@
                 <!-- start gender -->
                 <div class="form-group mt-3">
                     <label class="form-label">{{ $t("gender") }}</label>
-                    <select v-model="form.gender" required :class="`form-select radius ${local === 'en' ? 'arrow' : ''} ${
+                    <select v-model="form.gender" required :class="`form-select radius bg-white ${local === 'en' ? 'arrow' : ''} ${
                         $v.form.birthDate.$invalid &&
                         $v.form.birthDate.$anyDirty &&
                         $v.form.birthDate.$anyError ? 'is-invalid': ''
                     }`">
-                        <option value="gender">{{ $t("placeHolder.gender") }}</option>
+                        <option value="gender"> -- {{ $t("select") }} {{ $t("placeHolder.gender") }} -- </option>
                         <option value="male">{{ $t("placeHolder.male") }}</option>
                         <option value="female">{{ $t("placeHolder.female") }}</option>
                     </select>
@@ -326,18 +326,6 @@
             top: 24% !important;
             left: 48% !important;
         }
-    }
-
-    .btn-custom-rtl {
-        border-radius: inherit !important;
-        border-top-left-radius: 15px !important;
-        border-bottom-left-radius: 15px !important;
-    }
-
-    .btn-custom-ltr {
-        border-radius: inherit !important;
-        border-top-right-radius: 15px !important;
-        border-bottom-right-radius: 15px !important;
     }
 
     .signup-message-custom {

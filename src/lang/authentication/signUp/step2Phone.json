@@ -26,7 +26,8 @@
         "done": "Done",
         "termsText": "By signing up, you agree that you have read and accepted the ",
         "termsLink": "Terms of use & Privacy Policy.",
-        "Step_2_of_2": "Step 2 of 2"
+        "Step_2_of_2": "Step 2 of 2",
+        "select": "select"
     },
     "ar": {
         "signUp": "انشاء حساب",
@@ -56,6 +57,7 @@
         "done": "ادخال",
         "termsText": " عند انشائك الحساب انت توافقك علي انك قراءت ووافقت علي ",
         "termsLink": "شروط الاستخدام وسياسة الخصوصية.",
-        "Step_2_of_2": "مرحلة 2 / 2"
+        "Step_2_of_2": "مرحلة 2 / 2",
+        "select": "اختار"
     }
 }

@@ -42,3 +42,16 @@
     border: 2px solid #f1f1f1;
     padding: 3px;
 }
+
+
+.asset-custom-rtl {
+    border-radius: inherit !important;
+    border-top-left-radius: 35px !important;
+    border-bottom-left-radius: 35px !important;
+}
+
+.asset-custom-ltr {
+    border-radius: inherit !important;
+    border-top-right-radius: 35px !important;
+    border-bottom-right-radius: 35px !important;
+}

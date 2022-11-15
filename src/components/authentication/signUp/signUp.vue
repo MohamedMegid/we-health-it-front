@@ -46,56 +46,56 @@
                             {{ inputError($t("form.username.label")) }}
                         </div>
                     </div>
-
-                    <label
-                        ><strong>{{ $t("form.password.label") }}</strong></label
-                    >
-                    <div class="flex-grow-1">
-                        <input
-                            type="password"
-                            class="form-control"
-                            :placeholder="$t('form.password.placeholder')"
-                            v-model.trim="form.password"
-                            @input="$v.form.password.$touch()"
-                            :class="{
-                                'is-invalid':
-                                    $v.form.password.$invalid &&
-                                    $v.form.password.$anyDirty &&
-                                    $v.form.password.$anyError
-                            }"
-                        />
-                        <div
-                            v-if="!$v.form.password.required"
-                            class="invalid-feedback"
+                    <div class="form-group mt-3">
+                        <label
+                            ><strong>{{ $t("form.password.label") }}</strong></label
                         >
-                            {{ requiredError($t("form.password.label")) }}
-                        </div>
+                        <div class="flex-grow-1">
+                            <input
+                                type="password"
+                                class="form-control"
+                                :placeholder="$t('form.password.placeholder')"
+                                v-model.trim="form.password"
+                                @input="$v.form.password.$touch()"
+                                :class="{
+                                    'is-invalid':
+                                        $v.form.password.$invalid &&
+                                        $v.form.password.$anyDirty &&
+                                        $v.form.password.$anyError
+                                }"
+                            />
+                            <div
+                                v-if="!$v.form.password.required"
+                                class="invalid-feedback"
+                            >
+                                {{ requiredError($t("form.password.label")) }}
+                            </div>
 
-                        <div
-                            v-if="!$v.form.password.minLen"
-                            class="invalid-feedback"
-                        >
-                            {{
-                                minLengthError(
-                                    $t("form.password.label"),
-                                    $v.form.password.$params.minLen.min
-                                )
-                            }}
-                        </div>
+                            <div
+                                v-if="!$v.form.password.minLen"
+                                class="invalid-feedback"
+                            >
+                                {{
+                                    minLengthError(
+                                        $t("form.password.label"),
+                                        $v.form.password.$params.minLen.min
+                                    )
+                                }}
+                            </div>
 
-                        <div
-                            v-else-if="!$v.form.password.maxLen"
-                            class="invalid-feedback"
-                        >
-                            {{
-                                maxLengthError(
-                                    $t("form.password.label"),
-                                    $v.form.password.$params.maxLen.max
-                                )
-                            }}
+                            <div
+                                v-else-if="!$v.form.password.maxLen"
+                                class="invalid-feedback"
+                            >
+                                {{
+                                    maxLengthError(
+                                        $t("form.password.label"),
+                                        $v.form.password.$params.maxLen.max
+                                    )
+                                }}
+                            </div>
                         </div>
                     </div>
-
                     <div class="text-center mt-5">
                         <button
                             type="submit"
