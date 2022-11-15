@@ -16,7 +16,7 @@
 <script>
 export default {
 
-    props:["buttonLabel","spanLabel","seconds","func", "local"]
+    props:["buttonLabel","spanLabel","seconds","func"]
 };
 </script>
 
