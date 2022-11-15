@@ -394,7 +394,7 @@ export default {
             return true;
           else return false;
         },
-        minLen: minLength(12),
+        minLen: minLength(11),
         maxLen: maxLength(15),
       },
 
@@ -417,14 +417,7 @@ export default {
           let value = this.$refs.inputDate.value;
           if (value === "YYYY/MM/DD") return false;
           else true;
-          //  // (YYYY-MM-DD)
-          //  var g2 = new Date(2019 - 08 - 03);
-          //  if (g1.getTime() < g2.getTime())
-          //      document.write("g1 is lesser than g2");
-          //  else if (g1.getTime() > g2.getTime())
-          //      document.write("g1 is greater than g2");
-          //  else
-          //      document.write("both are equal");
+
         },
       },
       gender: {
