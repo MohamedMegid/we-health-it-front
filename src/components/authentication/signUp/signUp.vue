@@ -109,11 +109,13 @@
                 <router-link to="#">{{ $t("haveAccount") }}</router-link>
                 <div><Divider :label="$t('or')"></Divider></div>
                 <div class="d-flex justify-content-center">
-                    <a href="javascript:void(0)">
-                        <div class="social-login me-4 text-center">
-                            <i class="fa fa-google"></i>
-                        </div>
-                    </a>
+                    <div class="g-signin2" data-onsuccess="onSignIn">
+                        <a href="javascript:void(0)">
+                            <div class="social-login me-4 text-center">
+                                <i class="fa fa-google"></i>
+                            </div>
+                        </a>
+                    </div>
                     <a href="javascript:void(0)">
                         <div class="social-login me-4 text-center">
                             <i class="fa fa-facebook"></i>
@@ -202,6 +204,13 @@ export default {
         this.form.password = password ? password : "";
     },
     methods: {
+        onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+          console.log('Name: ' + profile.getName());
+          console.log('Image URL: ' + profile.getImageUrl());
+          console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        },
         async submitButton() {
             // console.log(urls.auth.baseUrl);
             this.$v.$touch();
