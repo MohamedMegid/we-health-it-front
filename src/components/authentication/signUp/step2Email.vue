@@ -1,16 +1,17 @@
-/* eslint-disable */
+
 <template>
   <div>
     <Base>
+      <p class="fw-lighter">{{ $t("Step_2_of_2") }}</p>
       <h1 class="mb-0">{{ $t("signUp") }}</h1>
-
       <form>
         <div class="form-group mt-4">
           <div class="row justify-content-between">
             <div class="col-md-8">
-              <label
-                ><strong>{{ $t("fullName") }}</strong></label
-              >
+              <!-- start fullName -->
+              <label>
+                <strong>{{ $t("fullName") }}</strong>
+              </label>
               <input
                 type="text"
                 class="form-control"
@@ -24,7 +25,6 @@
                     $v.form.fullName.$anyError,
                 }"
               />
-
               <div
                 v-if="!$v.form.fullName.required && $v.form.fullName.$error"
                 class="invalid-feedback"
@@ -38,10 +38,12 @@
                 {{ inputError($t("fullName")) }}
               </div>
             </div>
+            <!-- end full name  -->
+            <!-- start user name  -->
             <div class="col-md-4">
-              <label
-                ><strong>{{ $t("username") }}</strong></label
-              >
+              <label>
+                <strong>{{ $t("username") }}</strong>
+              </label>
               <input
                 type="text"
                 class="form-control"
@@ -52,7 +54,6 @@
                     !$v.form.username.required && $v.form.username.$error,
                 }"
               />
-
               <div
                 v-if="!$v.form.username.required && $v.form.username.$error"
                 class="invalid-feedback"
@@ -61,6 +62,12 @@
               </div>
             </div>
           </div>
+          <!-- end user name  -->
+          <!-- start email  -->
+
+
+
+
           <div class="mt-3">
             <label
               ><strong>{{ $t("emailAddress") }}</strong>
@@ -71,14 +78,26 @@
               class="form-control"
               :placeholder="$t('placeHolder.emailAddress')"
               v-model.trim="form.email"
+              :class="{
+                  'is-invalid':
+                    !$v.form.email.email && $v.form.email.$error,
+                }"
             />
+
+            <div
+                v-if=" !$v.form.email.email && $v.form.email.$error"
+                class="invalid-feedback"
+              >
+                {{ inputError($t("emailAddress")) }}
+              </div>
           </div>
 
+          <!-- end email  -->
+          <!-- start  date picker  -->
           <div class="mt-3">
-            <label
-              ><strong>{{ $t("birthDate") }}</strong></label
-            >
-
+            <label>
+              <strong>{{ $t("birthDate") }}</strong>
+            </label>
             <VueDatePicker
               v-model="form.date"
               ref="menu"
@@ -97,49 +116,72 @@
             >
               <!-- 2.6 notation -->
               <template #activator="{ date }">
-                <div class="input-group pinter ">
+                <div class="input-group">
                   <input
                     ref="inputDate"
-                    class="form-control  fc-datepicker hasDatepicker"
+                    class="form-control fc-datepicker hasDatepicker"
                     :value="datePicked ? date : 'YYYY/MM/DD'"
                     type="text"
+                    :class="`${
+                      local === 'en' ? 'asset-custom-rtl' : 'asset-custom-ltr'
+                    } ${
+                        $v.form.birthDate.$error &&  !datePicked
+                  ? 'is-invalid'
+                  : ''
+              }`"
                   />
-                  <div class="input-group-text">
+                  <div
+                    :class="`input-group-text justify-content-center w-15 ${
+                      local === 'en' ? 'asset-custom-ltr' : 'asset-custom-rtl'
+                    }`"
+                  >
                     <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
                   </div>
-                  <!-- <p
-                    class="text-danger"
-                    v-if="$refs.inputDate.value === 'YYYY/MM/DD'"
-                  >
+                  <div v-if="$v.form.birthDate.$error &&  !datePicked" class="invalid-feedback">
                     {{ requiredError($t("birthDate")) }}
-                  </p> -->
+                  </div>
                 </div>
               </template>
             </VueDatePicker>
           </div>
-
-
-          <div class="form-group  mt-3">
-            <label class="form-label ">{{ $t("gender") }}</label>
+          <!-- end date picker  -->
+          <!-- start gender -->
+          <div class="form-group mt-3">
+            <label class="form-label">{{ $t("gender") }}</label>
             <select
               v-model="form.gender"
-              :class="`form-select form-control ${local === 'en' ? 'arrow' : ''}`"
               required
+              :class="`form-select radius bg-white ${
+                local === 'en' ? 'arrow' : ''
+              } ${
+                $v.form.gender.$invalid &&
+                $v.form.gender.$anyDirty &&
+                $v.form.gender.$anyError
+                  ? 'is-invalid'
+                  : ''
+              }`"
             >
-              <option value="gender">{{ $t("placeHolder.gender") }}</option>
+              <option value="gender">
+                -- {{ $t("select") }} {{ $t("placeHolder.gender") }} --
+              </option>
               <option value="male">{{ $t("placeHolder.male") }}</option>
               <option value="female">{{ $t("placeHolder.female") }}</option>
             </select>
-            <p class="text-danger" v-if="$v.form.gender.$error">
+            <div v-if="$v.form.gender.$error" class="invalid-feedback">
               {{ requiredError($t("gender")) }}
-            </p>
+            </div>
           </div>
-          <p class="lead my-3">{{ $t("termsText") + $t("termsLink") }}</p>
-
+          <!-- end gender  -->
+          <p class="pt-3">
+            <span class="signup-message-custom"
+              >{{ $t("termsText") }}
+              <a href="#"> {{ $t("termsLink") }}</a></span
+            >
+          </p>
           <div class="text-center">
             <button
               @click.prevent="submitButton"
-              class="btn btn-primary btn-pill h3"
+              class="btn btn-primary btn-pill w-50"
             >
               {{ $t("done") }}
             </button>
@@ -153,7 +195,6 @@
 <script>
 import Base from "@/components/global/Base.vue";
 import { VueDatePicker } from "@mathieustan/vue-datepicker";
-import { mapGetters } from "vuex";
 /////////////////////////////////////
 import {
   required,
@@ -184,20 +225,24 @@ export default {
       unauthorizedError,
       minLengthError,
       maxLengthError,
+      interval: null,
       phoneOrEmail: null,
       date: new Date(),
+      sendCode: false,
       menu: false,
       datePicked: false,
+      seconds: 0,
       form: {
         fullName: "",
         email: "",
         username: "",
         birthDate: "",
-        rememberMe: true,
+        phone: "010",
+        phoneNumber: "",
+        phoneNumberCode: "",
         date: new Date(),
         gender: "gender",
       },
-
       submitStatus: "",
     };
   },
@@ -208,9 +253,9 @@ export default {
         maxLen: maxLength(40),
       },
       email: {
-        required,
         email,
       },
+
       username: {
         required,
         maxLen: maxLength(20),
@@ -219,6 +264,9 @@ export default {
           if (value.search(/^[a-z0-9_.]+$/g) != -1) return true;
         },
       },
+
+
+
       birthDate: {
         required,
         valid() {
@@ -256,7 +304,6 @@ export default {
       val && setTimeout(() => (this.$refs.menu.$refs.agenda.mode = "year"));
     },
   },
-
   mounted() {},
   methods: {
     async submitButton() {
@@ -265,30 +312,44 @@ export default {
       //     if (this.phoneOrEmail === "phone")
       //       this.$router.push("/auth/verify-phone");
       //   }
-
+    },
+    async resend() {
+      if (this.form.phoneNumber) {
+        this.sendCode = true;
+        clearInterval(this.interval);
+        this.seconds = 10;
+        this.interval = setInterval(() => {
+          this.seconds -= 1;
+          if (this.seconds <= 0) clearInterval(this.interval);
+        }, 1000);
+      } else {
+        await this.$v.form.phoneNumber.$touch();
+      }
     },
     open() {
       document.querySelector(".vd-picker__input-icon").click();
     },
-
     setDate() {
       this.form.birthDate = this.form.date;
     },
   },
 };
 </script>
+<style>
+.radius {
+  border-radius: 35px;
+}
 
-<style >
-.arrow {
-  background-position: right 0.75rem center !important;
-}
-.pinter{
-  cursor: pointer;
-}
 @media only screen and (min-width: 600px) {
   .vd-menu__content {
     top: 24% !important;
     left: 48% !important;
   }
+}
+
+.signup-message-custom {
+  font-weight: 350;
+  font-size: 84%;
+  display: inline-block;
 }
 </style>

@@ -38,7 +38,7 @@
                             </div>
                             <div class="">
                                 <small><b>{{ $t("RemainingTime") + " " }}</b>
-                                
+
                                     {{ seconds + " " + $t("seconds") }}</small
                                 >
                             </div>
@@ -125,7 +125,7 @@ export default {
         resend() {
             clearInterval(this.interval);
             this.adjustTimer();
-            
+
         },
         adjustTimer(){
             this.seconds = 120;
