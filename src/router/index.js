@@ -127,23 +127,50 @@ const routes = [
           },
         ],
       },
+
+      {
+        path: "/business",
+        name: "business",
+        component: lazyLoadView("Business"),
+        // beforeEnter(to, from, next) {
+        //     if (isAuthenticated())
+        //         return next({ name: "chooseCategory" })
+        //     return next()
+        // },
+         children: [{
+                alias: "/business",
+                path: "business-login",
+                name: "businessLogin",
+                component: lazyLoadComponent("businessAccount/Login"),
+            },
+        //     {
+        //         path: "choose-category",
+        //         name: "chooseCategory",
+        //         component: lazyLoadComponent("business/ChooseCategory"),
+        //     },
+        //     {
+        //         path: "choose-clinic",
+        //         name: "chooseClinic",
+        //         component: lazyLoadComponent("business/ChooseClinic"),
+        //     },
+        //     {
+        //         path: "clinic-registeration/:id",
+        //         name: "clinicRegistration",
+        //         component: lazyLoadComponent("business/ClinicRegistration"),
+        //         params: true,
+        //     },
+        //     {
+        //         path: "verify-branch/:id",
+        //         name: "verifyBranch",
+        //         component: lazyLoadComponent("business/VerifyBranch"),
+        //         params: true,
+        //  },
+         ],
+    },
+
     ],
   },
-  // {
-  //   path: "/about",
-  //   name: "about",
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () =>{}
-  //   //  import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  // },
 
-  // {
-  //   path: "*",
-  //   name: "error",
-  //   component: error,
-  // },
 ];
 
 const router = new VueRouter({
