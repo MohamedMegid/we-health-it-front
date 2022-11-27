@@ -7,30 +7,17 @@
     </div>
     <div class="content">
       <div
-        class="
-          container
-          d-flex
-          justify-content-center
-          align-items-center
-          w-100
-          p-2
-        "
+        class="container d-flex justify-content-center align-items-center w-100 p-2"
       >
         <div class="custom-container w-100 p-4">
           <div
-            class="
-              header
-              d-flex
-              justify-content-between
-              align-items-center
-              my-3
-            "
+            class="header d-flex justify-content-between align-items-center my-3"
           >
             <div
-              class="back-icon d-flex justify-content-center align-items-center"
+              class="back-icon p-5 d-flex justify-content-center align-items-center"
               @click="goBack"
             >
-              <i class="pi pi-angle-left"></i>
+              <i class="fa fa-arrow-left"></i>
             </div>
             <div class="lang-selection">
               <!-- <Dropdown
@@ -44,13 +31,7 @@
           </div>
           <transition name="slide" mode="out-in">
             <div
-              class="
-                form-content
-                d-flex
-                justify-content-center
-                align-items-center
-                mb-4
-              "
+              class="form-content d-flex justify-content-center align-items-center mb-4"
             >
               <router-view></router-view>
             </div>
@@ -64,9 +45,7 @@
 import Dropdown from "primevue/dropdown";
 import Steps from "primevue/steps";
 export default {
-  components: {
-
-  },
+  components: {},
   data() {
     return {
       selectedLanguage: "",
@@ -87,8 +66,7 @@ export default {
   created() {
     if (this.local == "ar")
       this.selectedLanguage = { name: "عربي", code: "ar" };
-    else
-      this.selectedLanguage = { name: "English", code: "en" };
+    else this.selectedLanguage = { name: "English", code: "en" };
     this.setStepsModel();
   },
   methods: {
@@ -97,11 +75,14 @@ export default {
       location.reload();
     },
     goBack() {
-      this.$router.go(-1);
+      // the business account is only one rout so we use current  currentActive to go back and if we are in first step go back to last route 
+      if (this.$root.$refs.formWizard.currentActive > 0)
+        this.$root.$refs.formWizard.previousTab();
+      else this.$router.go(-1);
     },
     setStepsModel() {
       this.id = this.$route.params.id ? this.$route.params.id : "";
-      if (this.local=='ar')
+      if (this.local == "ar")
         this.steps = [
           {
             to: "/business",
@@ -192,7 +173,8 @@ export default {
           border-radius: 50%;
           background-image: linear-gradient(
             160deg,
-            // $gradient-color-2,
+            green,
+            green // $gradient-color-2,
             // $gradient-color-1
           );
           cursor: pointer;
@@ -207,7 +189,7 @@ export default {
       }
       .logo {
         h1 {
-         // color: $tradmark-color;
+          // color: $tradmark-color;
           text-align: center;
         }
       }

@@ -137,40 +137,39 @@ const routes = [
         //         return next({ name: "chooseCategory" })
         //     return next()
         // },
-         children: [{
-                alias: "/business",
-                path: "business-login",
-                name: "businessLogin",
-                component: lazyLoadComponent("businessAccount/Login"),
-            },
-        //     {
-        //         path: "choose-category",
-        //         name: "chooseCategory",
-        //         component: lazyLoadComponent("business/ChooseCategory"),
-        //     },
-        //     {
-        //         path: "choose-clinic",
-        //         name: "chooseClinic",
-        //         component: lazyLoadComponent("business/ChooseClinic"),
-        //     },
-        //     {
-        //         path: "clinic-registeration/:id",
-        //         name: "clinicRegistration",
-        //         component: lazyLoadComponent("business/ClinicRegistration"),
-        //         params: true,
-        //     },
-        //     {
-        //         path: "verify-branch/:id",
-        //         name: "verifyBranch",
-        //         component: lazyLoadComponent("business/VerifyBranch"),
-        //         params: true,
-        //  },
-         ],
-    },
-
+        children: [
+          {
+            alias: "/business",
+            path: "business-login",
+            name: "businessLogin",
+            component: lazyLoadComponent("businessAccount/FormStepsParent"),
+          },
+          //     {
+          //         path: "choose-category",
+          //         name: "chooseCategory",
+          //         component: lazyLoadComponent("business/ChooseCategory"),
+          //     },
+          //     {
+          //         path: "choose-clinic",
+          //         name: "chooseClinic",
+          //         component: lazyLoadComponent("business/ChooseClinic"),
+          //     },
+          //     {
+          //         path: "clinic-registeration/:id",
+          //         name: "clinicRegistration",
+          //         component: lazyLoadComponent("business/ClinicRegistration"),
+          //         params: true,
+          //     },
+          //     {
+          //         path: "verify-branch/:id",
+          //         name: "verifyBranch",
+          //         component: lazyLoadComponent("business/VerifyBranch"),
+          //         params: true,
+          //  },
+        ],
+      },
     ],
   },
-
 ];
 
 const router = new VueRouter({

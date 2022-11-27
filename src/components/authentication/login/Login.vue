@@ -207,6 +207,12 @@ export default {
             if (this.$v.$invalid) {
                 this.submitStatus = 'ERROR'
             } else {
+                 if(this.$route.name==="businessLogin")
+                {
+                     // increase step count
+                         this.$root.$refs.formWizard.nextTab()
+                      return
+                }
                 // do your submit logic here
                 this.submitStatus = 'PENDING'
                 setTimeout(() => {

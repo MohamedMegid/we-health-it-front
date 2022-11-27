@@ -1,0 +1,66 @@
+{
+  "en": {
+    "labelClinic": {
+      "label": "Clinic name",
+      "placeHolderArabic": "Name in Arabic",
+      "placeHolderEnglish": "Name in English"
+    },
+    "titleTypes": {
+      "label": "Title",
+      "options": ["select", "professor", "lecturer", "consultant", "specialist"]
+    },
+    "branchTypes": {
+      "label": "Branch Type",
+      "options": ["select", "clinic", "center"]
+    },
+
+    "Specialties": {
+      "label": "Sub Specialties",
+      "options": ["all", "options", "selected", "multiple", "label"]
+    },
+    "serviceTypes": {
+      "label": "Service Type",
+      "options": ["all", "Branch Visit", "TeleHealth", "Home Visit"]
+    },
+    "description": {
+      "label": "Description",
+      "placeholder": "Business Description Area"
+    }
+  },
+
+  "ar": {
+    "labelClinic": {
+      "label": "اسم العياده",
+      "placeHolderArabic": "الاسم باللغه العربيه ",
+      "placeHolderEnglish": "الاسم باللغه الانجليزيه"
+    },
+    "branchTypes": {
+      "label": "نوع المنشائه",
+      "options": ["اختار", "عياده", "مركز"]
+    },
+    "titleTypes": {
+      "label": "المهنه",
+      "options": ["اختار", "استاذ", "محاضر", "استشاري", "اخصائي"]
+    },
+
+    "Specialties": {
+      "label": "التخصصات الفرعيه",
+      "options": ["الكل", "اختيارات", "الغده"]
+    },
+
+    "serviceTypes": {
+      "label": "نوع الخدمه",
+      "options": [
+        "اختيار الكل",
+        "زيارة الفرع",
+        "الرعاية الصحية عن بعد",
+        "زيارة منزلية"
+      ]
+    },
+
+    "description": {
+      "label": "التفاصيل",
+      "placeholder": "اكتب مزيد من التفاصيل عن منشائتك"
+    }
+  }
+}

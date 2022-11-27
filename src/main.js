@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+
 ////////////////////////////////
 import "@/axios/index";
 ////////////////////////////////////////////////////////////////////////
@@ -23,6 +24,7 @@ const i18n = new VueI18n({
 ////////////////////////////////////////////////////////////////////////
 // override template style
 import "@/assets/styles/customTemplate.css";
+
 ////////////////////////////////////////////////////////////////////////
 // global mixin variables which is created in each single component or .vue file
 Vue.mixin({

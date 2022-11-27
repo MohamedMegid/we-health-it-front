@@ -8,6 +8,7 @@
         autoFocus: true,
         titleTemplate: '<span class="number">#index#<\/span> <span class="title">#title#<\/span>'
     });
+      
 
     // WIZARD 2
     $('#wizard2').steps({
