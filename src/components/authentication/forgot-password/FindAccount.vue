@@ -1,12 +1,12 @@
 <template>
   <div class="find-account">
-        <h2 class="mb-1 mt-3">{{ $t('title') }}</h2>
+        <h2 class="mb-1 mt-3 blue-navy-color-palette"><b>{{ $t('title') }}</b></h2>
         <h6>{{ $t('text') }}</h6>
         <form>
-            <div class="form-group mt-4">
+            <div class="form-group mt-3">
                 <label><strong>{{ $t('form.username.label') }}</strong></label>
                 <div class="d-flex gap-3 align-items-sm-start flex-wrap flex-sm-nowrap">
-                    <div class="flex-grow-1">
+                    <div class="flex-grow-1 mb-2">
                         <input
                             type="text"
                             class="form-control"
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary btn-pill" @click.prevent="checkUSerExist">
+                        <button type="submit" class="btn btn-primary btn-pill asset-bg-green-linear-gradient custom-btn-mr" @click.prevent="checkUSerExist">
                             {{ $t('nextBtn') }}
                         </button>
                     </div>
@@ -91,6 +91,13 @@ export default {
         this.myAxios =axios.create({
             baseURL: `${urls.auth.baseUrl}`,
         });
+    },
+    mounted() {
+        if (this.$i18n.locale == 'ar') {
+            this.$nextTick(function () {
+                $('.custom-btn-mr').css("margin-right", "4px")
+            })
+        }
     },
     methods:{
         checkUSerExist(){

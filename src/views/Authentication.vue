@@ -14,7 +14,7 @@
                 <div class="row auth-wrapper d-flex justify-content-center align-items-center">
                     <div class="col-md-4 col-lg-6">
                         <div class="app-name d-flex justify-content-center align-items-center">
-                            <h1>We Health IT App Dev</h1>
+                            <h1 class="green-color-palette">We Health IT App Dev</h1>
                         </div>
                     </div>
                     <div class="col-md-8 col-lg-6">

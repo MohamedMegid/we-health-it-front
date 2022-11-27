@@ -30,7 +30,7 @@ const routes = [
     children: [
       {
         alias: "",
-        path: "login",
+        path: "signin",
         name: "login",
         component: lazyLoadComponent("authentication/login/Login"),
       },
@@ -51,7 +51,7 @@ const routes = [
       },
       {
         path: "complete-signup-phone",
-        name: "completeSignup",
+        name: "completeSignup-mobile",
         component: lazyLoadComponent("authentication/signUp/step2Phone"),
       },
       // {

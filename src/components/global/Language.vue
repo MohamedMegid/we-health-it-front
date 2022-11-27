@@ -1,8 +1,8 @@
 <template>
   <div class="loacale d-flex align-items-center">
-        <a class="nav-link p-2 m-1" @click="changeLocale" href="javascript:void(0)">
-            <span class="fs-5 me-1 d-xl-block" v-if="local=='ar'">English</span>
-            <span class="fs-5 me-1  d-xl-block" v-else>عربي</span>
+        <a class="nav-link p-2 m-1 white-color-palette" @click="changeLocale" href="javascript:void(0)">
+            <span class="fs-5 me-1 d-xl-block english-font-family" v-if="local=='ar'">English</span>
+            <span class="fs-5 me-1  d-xl-block arabic-font-family" v-else>عربي</span>
             <i class="fe fe-globe"></i>
         </a>
     </div>

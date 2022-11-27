@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary btn-pill" @click.prevent="checkUSerExist">
+                        <button type="submit" class="btn btn-primary btn-pill asset-bg-linear-linear-gradient" @click.prevent="checkUSerExist">
                             {{ $t('continue') }}
                         </button>
                     </div>
@@ -38,28 +38,31 @@
             <div><Divider :label="$t('or')"></Divider></div>
             <div class="d-flex justify-content-center">
                 <a href="javascript:void(0)">
-                    <div class="social-login me-4 text-center">
+                    <div class="social-login me-4 text-center green-color-palette">
                         <i class="fa fa-google"></i>
                     </div>
                 </a>
                 <a href="javascript:void(0)">
-                    <div class="social-login me-4 text-center">
+                    <div class="social-login me-4 text-center green-color-palette">
                         <i class="fa fa-facebook"></i>
                     </div>
                 </a>
                 <a href="javascript:void(0)">
-                    <div class="social-login me-4 text-center">
+                    <div class="social-login me-4 text-center green-color-palette">
                         <i class="fa fa-apple"></i>
                     </div>
                 </a>
                 <a href="javascript:void(0)">
-                    <div class="social-login me-4 text-center">
+                    <div class="social-login me-4 text-center green-color-palette">
                         <i class="fa fa-twitter"></i>
                     </div>
                 </a>
             </div>
-            <div class="mt-4">
-                <router-link to="#">{{$t('business.link')}}</router-link> {{$t('business.text')}}
+            <div class="mt-4 custom-responsive-mob-link">
+                <router-link to="#">{{
+                    $t("business.link")
+                }}</router-link>
+                <span>{{ $t("business.text") }}</span>
             </div>
         </form>
     </Base>
@@ -70,7 +73,7 @@
                 <img alt="avatar" :src="user.profile" class="brround">
             </div>
             <div class="main-chat-msg-name">
-                <h5 class="mb-1 text-dark fw-semibold">{{user.name}}</h5>
+                <h5 class="mb-1 text-dark fw-semibold blue-navy-color-palette">{{user.name}}</h5>
             </div>
         </div>
         <form>
@@ -95,27 +98,27 @@
                         </div>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary btn-pill" @click.prevent="signIn" >
+                        <button type="submit" class="btn btn-primary btn-pill asset-bg-green-linear-gradient" @click.prevent="signIn" >
                             {{ $t('signIn') }}
                         </button>
                     </div>
                 </div>
             </div>
-            <router-link :to="{name:'forgot-password'}" >{{ $t('forgetPassword') }}</router-link>
+            <router-link :to="{name:'findAccount'}" >{{ $t('forgetPassword') }}</router-link>
             <div class="form-group mt-2">
                 <label class="custom-switch">
                     <input type="checkbox" 
                     name="custom-switch-checkbox" 
                     class="custom-switch-input" 
                     v-model="form.rememberMe">
-                    <span class="custom-switch-indicator"></span>
-                    <span class="custom-switch-description">{{$t('stay')}}</span>
+                    <span class="custom-switch-indicator green-bg-color-palette"></span>
+                    <span class="custom-switch-description blue-navy-color-palette">{{$t('stay')}}</span>
                 </label>
             </div>
             <div><Divider :label="$t('or')"></Divider></div>
             <div class="mt-4  d-flex justify-content-center align-items-center">
-                <span><i class="fa fa-refresh fa-lg" aria-hidden="true"></i></span> 
-                <a class="nav-link text-primary" @click="reset" >{{$t('differentAccount')}}</a>
+                <span><i class="fa fa-refresh fa-lg green-color-palette" aria-hidden="true"></i></span> 
+                <a class="nav-link" @click="reset" >{{$t('differentAccount')}}</a>
             </div>
         </form>
     </Base>
@@ -233,8 +236,16 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.login {
-
-}
+<style scoped>
+    @media only screen and (max-width: 400px) {
+        .w-50 {
+            width: 100% !important;
+        }
+        .custom-responsive-mob-link {
+            font-size: smaller !important;
+        }
+    }
+    .custom-responsive-mob-link { 
+        min-width: auto;
+    }
 </style>

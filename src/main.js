@@ -18,8 +18,6 @@ const i18n = new VueI18n({
     : "en",
   // messages: {},
 });
-
-
 ////////////////////////////////////////////////////////////////////////
 // override template style
 import "@/assets/styles/customTemplate.css";
@@ -35,6 +33,9 @@ Vue.mixin({
     },
   })
 Vue.config.productionTip = false;
+if (i18n.locale == "ar") {
+  document.getElementsByTagName("body")[0].style = 'font-family: hacen-tunisia !important';
+}
 
 new Vue({
   router,

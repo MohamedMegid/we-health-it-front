@@ -55,3 +55,75 @@
     border-top-right-radius: 35px !important;
     border-bottom-right-radius: 35px !important;
 }
+
+body {
+    font-family: 'Montserrat';
+}
+
+.blue-navy-color-palette {
+    color:  #205072 !important;
+}
+
+.blue-light-color-palette {
+    color:  #0c6aed !important;
+}
+
+.green-color-palette {
+    color: #68B2A0 !important;
+}
+
+.green-bg-color-palette {
+    background-color: #68B2A0 !important;
+    border-color: #68B2A0 !important;
+}
+
+.white-color-palette {
+    color: white !important;
+}
+
+.gray-light-color-palette {
+    color: #979797 !important;
+}
+
+.asset-bg-linear-linear-gradient {
+    background-image: linear-gradient(#205072, #102839) !important;
+}
+
+
+.asset-bg-green-linear-gradient {
+    background-image: linear-gradient(#56C596, #2B634B) !important;
+    border-color: #56C596 !important;
+}
+
+.asset-color-linear-linear-gradient {
+    color: linear-gradient(#205072, #102839) !important;
+}
+
+.asset-radius-sys {
+    border-radius: 35px !important;
+}
+
+.arabic-font-family {
+    font-family: hacen-tunisia;
+}
+
+.english-font-family {
+    font-family: 'Montserrat';
+}
+
+a {
+    color: #0c6aed !important;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.avatar {
+    background: #2B634B;
+}
+
+/*body {
+    font-family: hacen-tunisia !important;
+}*/
+@font-face{font-family:'hacen-tunisia'; src: url("../../../public/template/assets/Fonts/Hacen-Tunisia/Hacen-Tunisia.ttf") format('truetype');}

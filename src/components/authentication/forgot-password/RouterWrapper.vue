@@ -1,7 +1,7 @@
 <template>
   <Base>
     <div class="back-btn mb-3">
-      <button type="button" class="btn btn-icon btn-primary btn-sm" @click.prevent="goBack">
+      <button type="button" class="btn btn-icon btn-primary btn-sm asset-bg-green-linear-gradient w-10" @click.prevent="goBack">
         <i class="fs-4 fa fa-angle-left" aria-hidden="true"></i>
       </button>
     </div>

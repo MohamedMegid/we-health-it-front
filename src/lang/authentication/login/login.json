@@ -12,7 +12,7 @@
       },
       "password": {
         "label": "Password",
-        "placeholder": "********"
+        "placeholder": "Enter your password"
       }
     },
     "forgetPassword": "Forgot your password?",
@@ -20,7 +20,7 @@
     "or": "Or",
     "business": {
       "link": "Create a business page",
-      "text": "for your clinic,pharmacy,laboratory or etc."
+      "text": " for your clinic, pharmacy, laboratory or etc."
     }
   },
   "ar": {
@@ -36,7 +36,7 @@
       },
       "password": {
         "label": "كلمة المرور",
-        "placeholder": "********"
+        "placeholder": "ادخل كلمة المرور"
       }
     },
     "forgetPassword": " هل نسيت كلمة المرور ؟",

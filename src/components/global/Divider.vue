@@ -43,6 +43,8 @@ export default {
           // this is really the only tricky part, you need to specify the background color of the container element...
           font-weight:bold ;
           background-color: #ffff;
+          -webkit-text-fill-color: #205072;
+          opacity: 1;
         }
       }
 </style>

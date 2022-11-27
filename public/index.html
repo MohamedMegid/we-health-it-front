@@ -1,80 +1,64 @@
-<!DOCTYPE html>
-<!-- <html lang="" style="font-size:1.75vmin;"> -->
-<html lang="">
-  <!--
-  <html lang=""  style="--primary-bg-color:#000000; --primary-bg-hover:#00000095; --primary-bg-border:#000000; --primary-transparentcolor:#00000020; --primary01:rgba(0, 0, 0, 0.1); --primary02:rgba(0, 0, 0, 0.2); --primary03:rgba(0, 0, 0, 0.3); --primary06:rgba(0, 0, 0, 0.6); --primary09:rgba(0, 0, 0, 0.9); --primary005:rgba(0, 0, 0, 0.05);"> -->
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
 
     <!-- META DATA -->
-    <meta name="description" content=" we health it " />
-    <meta name="author" content=" redFoxes company " />
-    <meta name="keywords" content=" health, care  , social network  ." />
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Sash – Bootstrap 5  Admin & Dashboard Template">
+    <meta name="author" content="Spruko Technologies Private Limited">
+    <meta name="keywords"
+        content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
 
-    <meta name="google-signin-client_id" content="463134898873-cjjnlb9ovmuli4imo2vsjfe1tlueeo53.apps.googleusercontent.com.apps.googleusercontent.com">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="<%= BASE_URL %>template/assets/images/brand/favicon.ico" />
+
+    <!-- TITLE -->
+    <title>We health it</title>
 
     <!-- BOOTSTRAP CSS -->
-    <link
-      id="style"
-      href="<%= BASE_URL %>template/assets/plugins/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link id="style" href="<%= BASE_URL %>template/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- STYLE CSS -->
-    <link
-      href="<%= BASE_URL %>template/assets/css/style.css"
-      rel="stylesheet"
-    />
-    <link
-      href="<%= BASE_URL %>template/assets/css/dark-style.css"
-      rel="stylesheet"
-    />
-    <link
-      href="<%= BASE_URL %>template/assets/css/transparent-style.css"
-      rel="stylesheet"
-    />
-    <link
-      href="<%= BASE_URL %>template/assets/css/skin-modes.css"
-      rel="stylesheet"
-    />
+    <link href="<%= BASE_URL %>template/assets/css/style.css" rel="stylesheet" />
+    <link href="<%= BASE_URL %>template/assets/css/dark-style.css" rel="stylesheet" />
+    <link href="<%= BASE_URL %>template/assets/css/transparent-style.css" rel="stylesheet">
+    <link href="<%= BASE_URL %>template/assets/css/skin-modes.css" rel="stylesheet" />
 
-    <!--- FONT-ICONS CSS -->
-    <link
-      href="<%= BASE_URL %>template/assets/css/icons.css"
-      rel="stylesheet"
-    />
+    <!--- FONT ICONS CSS -->
+    <link href="<%= BASE_URL %>template/assets/css/icons.css" rel="stylesheet" />
+
+    <link href="<%= BASE_URL %>template/assets/Fonts/Hacen-Tunisia/Hacen-Tunisia.ttf" rel="stylesheet" />
+    <link href="<%= BASE_URL %>template/assets/Fonts/Hacen-Tunisia/Hacen-Tunisia-Bd.ttf" rel="stylesheet" />
+    <link href="<%= BASE_URL %>template/assets/Fonts/Hacen-Tunisia/Hacen-Tunisia-Lt.ttf" rel="stylesheet" />
+    
 
     <!-- COLOR SKIN CSS -->
-    <link
-      id="theme"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      href="<%= BASE_URL %>template/assets/colors/color1.css"
-    />
-  </head>
-  <body
-    class="app sidebar-mini ltr sidebar-gone light-mode sidenav-toggled"
-    style="overflow: auto; font-size: 1rem"
-  >
-    <noscript>
-      <strong
-        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
-        properly without JavaScript enabled. Please enable it to
-        continue.</strong
-      >
-    </noscript>
-    <div class="horizontalMenucontainer">
-      <div id="we-health-it-app"></div>
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="<%= BASE_URL %>template/assets/colors/color1.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+
+<body class="app sidebar-mini ltr light-mode">
+
+    <!-- GLOBAL-LOADER -->
+    <div id="global-loader">
+        <img src="<%= BASE_URL %>template/assets/images/loader.svg" class="loader-img" alt="Loader">
     </div>
-    <!-- built files will be auto injected -->
+
+    <!-- /GLOBAL-LOADER -->
+    <div id="we-health-it-app"></div>
+
+    <!-- BACK-TO-TOP -->
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 
     <!-- JQUERY JS -->
-    <script  src="<%= BASE_URL %>template/assets/js/jquery.min.js"></script>
+    <script src="<%= BASE_URL %>template/assets/js/jquery.min.js"></script>
 
     <!-- BOOTSTRAP JS -->
     <script src="<%= BASE_URL %>template/assets/plugins/bootstrap/js/popper.min.js"></script>
@@ -83,8 +67,7 @@
     <!-- SPARKLINE JS-->
     <script src="<%= BASE_URL %>template/assets/js/jquery.sparkline.min.js"></script>
 
-    <!-- Sticky js -->
-    <script src="<%= BASE_URL %>template/assets/js/sticky.js"></script>
+    
 
     <!-- CHART-CIRCLE JS-->
     <script src="<%= BASE_URL %>template/assets/js/circle-progress.min.js"></script>
@@ -97,9 +80,9 @@
     <script src="<%= BASE_URL %>template/assets/plugins/sidebar/sidebar.js"></script>
 
     <!-- Perfect SCROLLBAR JS-->
-    <!-- <script src="<%= BASE_URL %>template/assets/plugins/p-scroll/perfect-scrollbar.js"></script>
+    <script src="<%= BASE_URL %>template/assets/plugins/p-scroll/perfect-scrollbar.js"></script>
     <script src="<%= BASE_URL %>template/assets/plugins/p-scroll/pscroll.js"></script>
-    <script src="<%= BASE_URL %>template/assets/plugins/p-scroll/pscroll-1.js"></script> -->
+    <script src="<%= BASE_URL %>template/assets/plugins/p-scroll/pscroll-1.js"></script>
 
     <!-- INTERNAL CHARTJS CHART JS-->
     <script src="<%= BASE_URL %>template/assets/plugins/chart/Chart.bundle.js"></script>
@@ -130,22 +113,23 @@
 
     <!-- SIDE-MENU JS-->
     <script src="<%= BASE_URL %>template/assets/plugins/sidemenu/sidemenu.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <!-- TypeHead js -->
-    <!-- <script src="<%= BASE_URL %>template/assets/plugins/bootstrap5-typehead/autocomplete.js"></script>
-    <script src="<%= BASE_URL %>template/assets/js/typehead.js"></script> -->
+    <script src="<%= BASE_URL %>template/assets/plugins/bootstrap5-typehead/autocomplete.js"></script>
+    <script src="<%= BASE_URL %>template/assets/js/typehead.js"></script>
 
     <!-- INTERNAL INDEX JS -->
     <script src="<%= BASE_URL %>template/assets/js/index1.js"></script>
 
+    <!-- Sticky js -->
+    <script src="<%= BASE_URL %>template/assets/js/sticky.js"></script>
     <!-- Color Theme js -->
     <script src="<%= BASE_URL %>template/assets/js/themeColors.js"></script>
 
-        <!-- SHOW PASSWORD JS -->
-    <script src="<%= BASE_URL %>template/assets/js/show-password.min.js"></script>
-
     <!-- CUSTOM JS -->
     <script src="<%= BASE_URL %>template/assets/js/custom.js"></script>
-  </body>
+
+
+</body>
+
 </html>

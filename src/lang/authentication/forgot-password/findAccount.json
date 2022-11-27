@@ -1,7 +1,7 @@
 {
   "en": {
     "title": "Find your account",
-    "text": "Please enter your email , phone number or your username ",
+    "text": "Please enter your email, phone number or your username ",
     "form": {
       "username": {
         "label": "Email / Phone / Username",

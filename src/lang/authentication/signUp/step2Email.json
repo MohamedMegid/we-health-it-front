@@ -1,25 +1,36 @@
 {
     "en": {
-        "signUp": "Sign Up",
-        "fullName": "Full Name",
-        "username": "User Name",
+        "signUp": "Sign up",
+        "fullName": "Full name",
+        "username": "Username",
         "emailAddress": "Email address ",
         "notRequired":"*Not Required*",
-        "birthDate": "Birth Date",
+        "birthDate": "Birthdate",
         "gender": "Gender",
         "placeHolder": {
             "emailAddress": "example@example.com",
-            "username": "@userName",
+            "username": "@username",
             "male": "Male",
             "female": "Female",
-            "fullName":"Full Name",
-            "gender": "Gender"
+            "fullName":"Full name",
+            "gender": "gender"
 
+        },
+        "phoneNumber": {
+            "label": "Phone Number",
+            "enterCode": "Enter Code",
+            "ActiveButton": "Active",
+            "RemainingTime": "Remaining",
+            "resend": "Resend",
+             "resendTitle":"Didn't get it?",
+            "seconds": "s",
+            "sendCode":"Send code"
         },
         "done":"Done",
         "termsText":"By signing up, you agree that you have read and accepted the ",
-        "termsLink":"Terms of use & Privacy Policy."
-
+        "termsLink":"Terms of use & Privacy Policy.",
+        "Step_2_of_2": "Step 2 of 2",
+        "select": "select"
     },
     "ar": {
         "signUp": "انشاء حساب",
@@ -31,14 +42,26 @@
         "gender": "النوع",
         "placeHolder": {
             "emailAddress": "example@example.com",
-            "username": "@userName",
+            "username": "@اسم المستخدم",
             "male": "ذكر",
             "female": "انثي",
             "fullName":"الاسم بالكامل ",
             "gender": "النوع"
         },
+        "phoneNumber": {
+            "label": "رقم الهاتف",
+            "enterCode": "ادخل الكود",
+            "ActiveButton": "تفعيل",
+            "RemainingTime": "باقي من ",
+            "seconds": "ث",
+            "resend": "اعاده ارسال",
+            "resendTitle":"لم يصل الكود؟",
+            "sendCode":"ارسال الكود"
+        },
         "done":"ادخال",
         "termsText":" عند انشائك الحساب انت توافقك علي انك قراءت ووافقت علي ",
-        "termsLink":"شروط الاستخدام وسياسة الخصوصية.."
+        "termsLink":"شروط الاستخدام وسياسة الخصوصية..",
+        "Step_2_of_2": "مرحلة 2 / 2",
+        "select": "اختار"
     }
 }

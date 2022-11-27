@@ -2,24 +2,24 @@
   "en": {
     "signUp": "Sign up",
     "slogan": "Simply get it done",
-    "haveAccount": "Already have account",
+    "haveAccount": "Already have account!",
     "differentAccount": "Sign in with different account",
     "Step_1_of_2": "Step 1 of 2",
     "form": {
       "username": {
-        "label": "Email / Phone / Username",
-        "placeholder": "Enter Email, Phone, Username"
+        "label": "Email / Phone number",
+        "placeholder": "Enter email address or phone number"
       },
       "password": {
         "label": "Password",
-        "placeholder": "********"
+        "placeholder": "Enter your password"
       }
     },
     "continue": "Continue",
     "or": "Or",
     "business": {
       "link": "Create a business page",
-      "text": "for your clinic,pharmacy,laboratory or etc."
+      "text": " for your clinic, pharmacy, laboratory or etc."
     }
   },
   "ar": {
@@ -28,7 +28,7 @@
     "haveAccount": "لديك حساب بالفعل",
     "stay": "ابقي متصلا",
     "differentAccount": "تسجيل الدخول عن طريق حساب اخر",
-    "Step_1_of_2": "مرحلة 1 / 2",
+    "Step_1_of_2": "خطوة 1 / 2",
     "form": {
       "username": {
         "label": " البريد الالكتروني / رقم الهاتف",
@@ -36,13 +36,13 @@
       },
       "password": {
         "label": "كلمة المرور",
-        "placeholder": "********"
+        "placeholder": "كلمة المرور"
       }
     },
     "continue": "تسجيل الدخول",
     "or": "أو",
     "business": {
-      "link": "أنشأ صفحة عمل",
+      "link": "أنشأ صفحة عمل ",
       "text": "لعيادة أو صيدلية أو مختبر أو غيرها"
     }
   }

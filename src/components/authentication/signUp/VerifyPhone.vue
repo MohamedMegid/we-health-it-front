@@ -1,31 +1,28 @@
 <template>
     <div>
         <Base>
-            <div class="back-btn mb-3">
-                <button @click="back" class="btn btn-icon btn-primary btn-sm">
+            <div class="back-btn mb-5">
+                <button @click="back" class="btn btn-icon btn-primary btn-sm asset-bg-green-linear-gradient w-10">
                     <i class="fs-4 fa fa-angle-left" aria-hidden="true"></i>
                 </button>
             </div>
-            <h3 class="mb-0">{{ $t("verifyHeader") }}</h3>
-            <p class="pt-3">
-                <span class="verify-message-custom">{{ $t("verifyMessage") }}</span>
-                <!-- <router-link to="#">{{ $t("signIn") }}</router-link> -->
-            </p>
+            <h3 class="mb-3"><b>{{ $t("verifyHeader") }}</b></h3>
+            <p>{{ $t("verifyMessage") }}</p>
             <form>
                 <div class="d-flex justify-content-between">
                     <div class="d-flex justify-content-start">
                         <div>
                             <input
-                                type="text"
-                                class="form-control w-80 code-responsive-custom"
+                                type="number"
+                                class="form-control w-90 code-responsive-custom"
                                 :placeholder="$t('inputPlaceHolder')"
                                 v-model.trim="code"
                                 @input="$v.code.$touch()"
                                 :class="{
                                     'is-invalid':
-                                        $v.code.$invalid &&
+                                        ( $v.code.$invalid &&
                                         $v.code.$anyDirty &&
-                                        $v.code.$anyError
+                                        $v.code.$anyError ) || (backendError)
                                 }"
                             />
                             <div v-if="!$v.code.maxLen" class="invalid-feedback">
@@ -36,27 +33,39 @@
                                     )
                                 }}
                             </div>
-                            <div class="">
-                                <small><b>{{ $t("RemainingTime") + " " }}</b>
+                            <div
+                                v-if="
+                                    !$v.code.required &&
+                                        $v.code.$error
+                                "
+                                class="invalid-feedback"
+                            >
+                                {{ requiredError($t("code")) }}
+                            </div>
+                            <div v-if="backendError" class="invalid-feedback">
+                                {{ backendError }}
+                            </div>
+                            <div class="mt-2">
+                                <p><b>{{ $t("RemainingTime") + " " }}
 
-                                    {{ seconds + " " + $t("seconds") }}</small
+                                    <span class="green-color-palette">{{ seconds + " " + $t("seconds") }}</span></b></p
                                 >
                             </div>
                         </div>
                     </div>
-                    <div class="buttons d-flex gap-2 h-100 mt-5 justify-content-end">
+                    <div class="buttons d-flex gap-2 h-100 mt-6 justify-content-end">
                         <button
                             @click.prevent="doneButton"
-                            class="btn btn-primary btn-pill"
+                            class="btn btn-primary asset-bg-green-linear-gradient asset-radius-sys"
                         >
-                            <small>{{ $t("done") }}</small>
+                            {{ $t("done") }}
                         </button>
 
                         <button
                             @click.prevent="resend"
-                            class="btn btn-primary btn-pill"
+                            class="btn btn-primary asset-radius-sys asset-bg-linear-linear-gradient"
                         >
-                            <small>{{ $t("resend") }}</small>
+                            {{ $t("resend") }}
                         </button>
                     </div>
 
@@ -86,9 +95,17 @@ export default {
             ////////////////////////
             code: "",
             seconds: 0,
-            interval: null
+            interval: null,
+            backendError: null
             ///////////
         };
+    },
+    watch: {
+        code: {
+            handler(newValue, oldValue){
+                this.backendError = null
+            }
+        }
     },
     mounted() {
         this.adjustTimer();
@@ -101,24 +118,37 @@ export default {
         }
     },
     created() {
-        // console.log(urls)
         // create axios instance
-        // this.myAxios = axios.create({
-        //   baseURL: `${urls.auth.baseUrl}`,
-        // });
+        this.myAxios = axios.create({
+          baseURL: `${urls.auth.baseUrl}`,
+        });
     },
     methods: {
         async submitButton() {
             this.$v.$touch();
         },
         doneButton() {
-            // this.myAxios = axios.create({
-            //   baseURL: `${urls.auth.baseUrl}`,
-            // });
-            this.$router.push("/auth/complete-signup-email");
+            this.$v.$touch();
+            if (!this.$v.$error) {
+                let url = `${urls.auth.baseUrl}users/verify-phone`;
+
+                let data = {
+                    "mobile": localStorage.value,
+                    "code": this.code,
+                    "lang": this.$i18n.locale
+                }
+
+                this.myAxios
+                .post(url, data)
+                .then(res=>{
+                    this.$router.push("/auth/complete-signup-email");
+                })
+                .catch(err=>{
+                    this.backendError = err.response.data.error
+                })
+            }
         },
         back() {
-            console.log("back");
             this.$router.go(-1);
         },
 
