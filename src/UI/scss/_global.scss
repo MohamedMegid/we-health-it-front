@@ -1,0 +1,21 @@
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pi{
+    z-index: 2;
+    
+}
+.pi-plus{
+    color:#fff ; 
+}
+.table-responsive{
+    overflow-y: visible !important;
+}
+
+html {
+    font-size: calc(11px + 0.390625vw);
+    text-transform: capitalize;
+}

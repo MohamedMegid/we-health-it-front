@@ -1,0 +1,57 @@
+.p-calendar.border-error {
+    .p-inputtext {
+        color: $error !important;
+        border: 1px solid $error !important;
+    }
+    .p-datepicker-trigger {
+        border: 1px solid $error !important;
+        &:hover {
+            border: 1px solid $error!important;
+        }
+        &:focus {
+            border: 1px solid $error !important;
+        }
+        .p-button-icon {
+            color: $error !important;
+        }
+    }
+}
+
+// selectbutton
+.custom-horizontal-selectbutton.p-selectbutton {
+    .p-button {
+        border: none;
+        border-radius: 34px !important;
+        background: $secondary-color-4;
+        margin: 5px;
+        &:hover {
+            color: #ffff !important;
+            background-image: linear-gradient(160deg, $gradient-color-2, $gradient-color-1) !important;
+        }
+    }
+    .p-highlight {
+        background-image: linear-gradient(160deg, $gradient-color-2, $gradient-color-1);
+    }
+}
+
+.custom-vertical-selectbutton.p-selectbutton {
+    .p-button {
+        border: none;
+        border-radius: 34px !important;
+        background-image: linear-gradient(160deg, $gradient-color-4, $gradient-color-1);
+        color: #ffff;
+        margin: 10px;
+        display: block;
+        &:hover {
+            color: #ffff !important;
+            background-image: linear-gradient(160deg, $gradient-color-2, $gradient-color-1) !important;
+        }
+    }
+    .p-highlight {
+        background-image: linear-gradient(160deg, $gradient-color-2, $gradient-color-1);
+    }
+}
+
+/deep/ .pi-chevron-down {
+    color: $tradmark-color;
+}

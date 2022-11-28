@@ -104,9 +104,9 @@
             <router-link :to="{name:'forgot-password'}" >{{ $t('forgetPassword') }}</router-link>
             <div class="form-group mt-2">
                 <label class="custom-switch">
-                    <input type="checkbox" 
-                    name="custom-switch-checkbox" 
-                    class="custom-switch-input" 
+                    <input type="checkbox"
+                    name="custom-switch-checkbox"
+                    class="custom-switch-input"
                     v-model="form.rememberMe">
                     <span class="custom-switch-indicator"></span>
                     <span class="custom-switch-description">{{$t('stay')}}</span>
@@ -114,7 +114,7 @@
             </div>
             <div><Divider :label="$t('or')"></Divider></div>
             <div class="mt-4  d-flex justify-content-center align-items-center">
-                <span><i class="fa fa-refresh fa-lg" aria-hidden="true"></i></span> 
+                <span><i class="fa fa-refresh fa-lg" aria-hidden="true"></i></span>
                 <a class="nav-link text-primary" @click="reset" >{{$t('differentAccount')}}</a>
             </div>
         </form>
@@ -156,7 +156,7 @@ export default {
             },
             isValidUsername:false,
             submitStatus:''
-            
+
         }
     },
     validations:{
@@ -178,7 +178,7 @@ export default {
             },
             password:{
                 required,
-                
+
             },
         },
     },
@@ -199,14 +199,14 @@ export default {
                 this.isValidUsername = true;
                 await this.$nextTick();
             }
-            
+
         },
         signIn(){
             console.log('submit!')
             this.$v.$touch()
             if (this.$v.$invalid) {
                 this.submitStatus = 'ERROR'
-            } else {
+            }  else {
                  if(this.$route.name==="businessLogin")
                 {
                      // increase step count

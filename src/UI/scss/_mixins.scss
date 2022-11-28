@@ -1,0 +1,21 @@
+@import './phoneNumber';
+/*avatar*/
+.p-avatar-image{
+    box-shadow: $shadow-2 !important;
+    border: 3px solid white;
+}
+/*errors*/
+.border-error{
+    border:1px solid $error;
+}
+/*custom btn classes*/
+.hide-btn-icon{
+    .p-button-icon{
+        display: none !important;
+    }
+}
+.custom-sm-btn{
+        padding: 5px 20px !important;
+        font-size: 12px !important;
+        // margin-top: 5px !important;
+}

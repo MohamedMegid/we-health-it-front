@@ -1,0 +1,115 @@
+// phone number input package
+.vue-phone-number-input{
+    border:none !important;
+    width: 100% !important;
+    height: 40px !important;
+    // select box 
+    .select-country-container{
+        min-width: 95px !important;
+        max-width:95px !important;
+    }
+    .input-country-selector.is-focused{
+        .country-selector__input{
+            outline: none !important;
+            border: 1px solid $secondary-color-2 !important;
+            box-shadow: $shadow-7 !important;
+        }
+    }
+    .country-selector__input{
+        color: $secondary-color-2 !important;
+        border: 1px solid $secondary-color-2 !important;
+        border-radius: 34px 0px 0px 34px !important;
+        padding-top: 0 !important;
+        padding-left: 35px !important;
+        padding-right: 25px !important;
+    }
+    .country-selector__label{
+        display: none !important;
+    }
+    .country-selector__country-flag{
+        top: 14px !important;
+    }
+    .country-selector__list{
+        .vue-recycle-scroller__item-view{
+            button{
+                color: $secondary-color-3 !important;
+                &:hover{
+                    color: $secondary-color-2 !important;
+
+                }
+            }
+            .selected{
+                background: none !important;
+                color: $secondary-color-2 !important;
+            }
+        }
+    }
+    .country-selector__toggle{
+        .arrow{
+            fill: $secondary-color-2 !important;
+        }
+
+    }
+    .country-selector{
+        font-size: 10px;
+    }
+    // input
+    .input-tel__input{
+            outline: none !important;
+            border: 1px solid $secondary-color-2 !important;
+            border-radius: 0px 34px 34px 0px !important;
+            box-shadow: $shadow-7 !important;
+        &:focus{
+            outline: none !important;
+            border: 1px solid $secondary-color-2 !important;
+            box-shadow: $shadow-7 !important;
+        }
+        &::placeholder{
+            color: $secondary-color-2 !important;
+        }
+    }
+    .input-tel__label{
+        transform: translateY(-7px) !important;
+        color: $name-color !important;
+    }
+}
+
+/*phone number input package arabic*/
+.arabic-content{
+    .vue-phone-number-input{
+        .country-selector__input{
+            border-radius: 0px 34px 34px 0px !important;
+           
+        }
+        // input
+        .input-tel__input:not(.no-country-selector) {
+            border-radius: 0px !important;
+            border-top-left-radius: 34px !important;
+            border-bottom-left-radius:34px !important;
+        }
+        
+    }
+}
+/*phone number input package error*/
+.vue-phone-number-input.border-error{
+    .country-selector__input{
+        
+        border: 1px solid $error !important;
+        color: $error !important ;
+    }
+    .input-tel__input{
+        border: 1px solid $error !important;
+        color: $error !important;
+        &::placeholder{
+            color: $error !important;
+        }
+    }
+    .input-tel__label{
+    color: $error !important;
+    }
+    .country-selector__toggle{
+        .arrow{
+            fill: $error !important;
+        }
+    }
+}

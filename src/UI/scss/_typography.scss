@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+$font-stack:'Montserrat', sans-serif;
+$Regular :400;
+$Medium :500;
+$Semi-bold :600;
+$Bold :700;
+// 
+h1{
+    font-weight: $Bold;
+    font-size: 55px;
+    line-height: 73px;
+}
+h2{
+    font-weight: $Bold;
+    font-size: 34px;
+    line-height: 45px;
+}
+h3{
+    font-weight: $Bold;
+    font-size: 21px;
+    line-height: 28px;
+}
+h4{
+    font-weight: $Bold;
+    font-size: 15px;
+    line-height: 18px;
+}
+h5{
+    font-weight:$Semi-bold;
+    font-size: 13px;
+    line-height: 18px;
+}
+p{
+    font-weight:$Medium;
+    font-size: 15px;
+    line-height: 20px;  
+}
+.small-p{
+    font-weight:$Medium;
+    font-size: 13px;
+    line-height: 18px;  
+}
+.sub-title,.sub-header{
+    font-weight:$Bold;
+    font-size: 13px;
+    line-height: 18px;  
+}
+.caption{
+    font-weight:$Medium;
+    font-size: 13px;
+    line-height: 18px;  
+}
+small{
+    font-weight:$Medium;
+    font-size: 10px;
+    line-height: 11px;   
+}
+label{
+    display: block;
+    font-weight:$Bold;
+    font-size: 12px;
+    line-height: 26px;   
+}
+a,.a{
+    color:$link-color !important;
+    font-size: 15px;
+    font-weight: $Bold;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+//  media query
+@media (max-width:425px) {  
+    h1{
+        font-size:30px ;
+    }
+    h2{
+        font-size: 24px ;
+    }
+    a{
+        font-size: 12px;
+    }
+}
+.text-error{
+    display: block;
+    color:$error ;
+}

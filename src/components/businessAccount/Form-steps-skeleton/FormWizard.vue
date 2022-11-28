@@ -1,8 +1,8 @@
 <template>
   <div>
-    <ul class="steps has-content-centered  is-rtl" style="direction: ltr;">
+    <ul class="steps has-content-centered   " style="direction: ltr;">
       <li
-        class="steps-segment "
+        class="steps-segment  mt-0 "
         v-for="tab in tabs"
         :class="{ 'is-active': tab.isActive }"
         v-bind:key="tab.name"
@@ -61,6 +61,8 @@ export default {
 
 mounted() {
      this.totalTabs = this.tabs.length;
+
+
   },
   updated(){
    },

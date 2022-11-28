@@ -1,7 +1,4 @@
 <template>
-
-  
-  
   <div class="card">
     <form-wizard>
       <template v-slot="{ formData }">
@@ -59,12 +56,10 @@ export default {
     Login,
     Login,
   },
- 
 };
 </script>
 
 <style lang="scss">
- 
 ul {
   list-style-type: none !important;
 }

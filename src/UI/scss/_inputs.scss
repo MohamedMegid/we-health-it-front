@@ -1,0 +1,72 @@
+
+// input{
+//     border-radius: 34px;
+//     outline: none;
+//     border: none;
+//     box-shadow: none;
+//     box-shadow: $shadow-7;
+//     border: 1px solid $secondary-color-2;
+//     color: $secondary-color-2;
+//     padding: 10px;
+//     &::placeholder{
+//         color: $tradmark-color;
+//     }
+//     &:focus{
+//         border: 1px solid $secondary-color-2;
+        
+//     }
+//     &:disabled{
+//         background-color: rgba($secondary-color-4, .34);
+//         box-shadow: none;
+//     }
+//     &::-webkit-inner-spin-button { display: none; }
+//     &::-webkit-calendar-picker-indicator {
+//         color: rgba(0, 0, 0, 0);
+//         opacity: 1;
+//         display: block;
+  
+//     }
+    
+// }
+
+.input-error{
+    box-shadow: none;
+    border:1px solid $error ;
+    color: $error;
+    &:focus{
+        color: $error;
+        border:1px solid $error ;
+        
+    }
+    &::placeholder{
+        color: $error;
+    }
+}
+
+.input-success{
+    box-shadow: none;
+    border:1px solid $input-color-2 ;
+    color: $input-color-2;
+    &:focus{
+        color: $input-color-2;
+        border:1px solid $input-color-2 ;
+        
+    }
+    &::placeholder{
+        color: $input-color-2;
+    }
+}
+.input-warning{
+    box-shadow: none;
+    border:1px solid $warning ;
+    color: $warning;
+    &:focus{
+        color: $warning;
+        border:1px solid $warning ;
+        
+    }
+    &::placeholder{
+        color: $warning;
+    }
+}
+
